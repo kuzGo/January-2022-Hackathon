@@ -1,0 +1,16 @@
+## This PR will:
+- INCLUDE INFORMATION ABOUT WHAT THE PR CONTAINS I.E:
+- ADD feature/etc
+- REMOVE .... etc
+- UPDATE .... etc
+
+## Potential issues / Breaking changes
+- IF ANYTHING YOU'RE COMMITTING WOULD BREAK SOMETHING, INCLUDE HERE WHAT WOULD BREAK
+- IF YOU HAVE NO BREAKING CHANGES, ENTER 'None'
+
+## Screenshots
+- IF YOU HAVE ANY SCREENSHOTS, INCLUDE THEM HERE.
+- IF YOU HAVE NO SCREENSHOTS, ENTER 'None'
+
+## Confirm with PR creator before merging?
+- YES/NO
