@@ -72,16 +72,15 @@ class User(db.Document, UserMixin):
 user_manager = UserManager(app, db, User)
 
 
-# --- // Book Repository Main Routes (Endpoints): CRUD.
+# --- // Mind Timer Main Routes (Endpoints): CRUD.
 @app.route("/")
 @app.route("/index")
 @app.route("/index.html")
 def home_page():
     """
-    Landing/Home Page, accessible before sign in/login. If logged in, user is redirected to the Member's Page.
+    Landing/Home Page, accessible before sign in/login. If logged in, user is redirected to the Mind Timer Page.
     At first access/touch the user 'admin' is created using environment variables for the password and email address.
-    At first access/touch the genre collection for the books is created based on 'genre.json'. Both the user and genre
-    creations are here as they will be created twice on Heroku if placed in the main code.
+    The user creation is here as it will be created twice on Heroku if placed in the main code.
     """
     if current_user.is_authenticated:
         return redirect(url_for("member_page"))
