@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Mindfulness at play...PLEASE UPDATE THIS!!.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/site.webmanifest">
+    <title>{{ user_manager.USER_APP_NAME }}</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/styles.css') }}">
+    <!-- Cookie Consent by Osano: https://www.osano.com/cookieconsent/download/ -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+
+    {# *** Allow sub-templates to insert extra html to the head section *** #}
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <header>
+        {% block body %}
+        <nav class="nav-wrapper white">
+            <div class="container">
+
+            </div>
+        </nav>
+    </header>
+    {% block menu %}
+    {% endblock %}
+
+    <div id="main-div" class="container center">
+        {# One-time system messages called Flash messages #}
+        {% block flash_messages %}
+        {%- with messages = get_flashed_messages(with_categories=true) -%}
+        {% if messages %}
+        {% for category, message in messages %}
+        {% if category=='error' %}
+        {% set category='danger' %}
+        {% endif %}
+        <div class="message chip message-{{category}}">{{ message|safe }}</div>
+        {% endfor %}
+        {% endif %}
+        {%- endwith %}
+        {% endblock %}
+    </div>
+
+    {% block main %}
+    {% block content %}{% endblock %}
+    {% endblock %}
+
+    <footer class="page-footer transparent">
+        <div class="footer-copyright blue darken-4">
+            <div class="left-align">{{ user_manager.USER_APP_NAME }} {{ user_manager.USER_APP_VERSION }}</div>
+            <div class="right-align">&copy; {{ user_manager.USER_COPYRIGHT_YEAR }}
+                {{ user_manager.USER_CORPORATION_NAME }}</div>
+        </div>
+
+
+    </footer>
+    {% endblock %}
+
+    
+
+    {# *** Allow sub-templates to insert extra html to the bottom of the body *** #}
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>
