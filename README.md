@@ -82,6 +82,69 @@ Resources page
 
 
 # Deployment
+## Local Deployment
+
+To run this project locally make sure you have installed the following:
+
+- an IDE of your choice (such as Gitpod, VS Code, etc.)
+- have the following installed:
+    - [Git](https://git-scm.com/)
+    - [Python3](https://www.python.org/downloads/)
+    - [PIP](https://pypi.org/project/pip/)
+
+### Clone the GitHub Repository
+
+To clone this project and run locally please follow the below steps:
+1. Login into GitHub with your account
+2. Go to the [project repository](https://github.com/AdamBoley/January-2022-Hackathon) **URL NEEDS TO BE UPDATED**
+3. If using Gitpod click on the "Code" button (located next to the green "Gitpod" button)
+4. From the dropdown menu copy the HTTPS URL
+5. In your local IDE open the terminal
+6. Change your working directory to the location where you want the cloned project saved
+7. Type `git clone` and paste copied URL from Step 4
+8. Press enter to create your local clone
+
+### Install project dependencies
+- Install project requirements by typing `pip install -r requirements.txt`
+
+### Create a database on MongoDB
+
+Register for a free account with [MongoDB](https://account.mongodb.com/account/register)
+
+- Create a new Project and call it 'mindful timer'
+- Create a Cluster, choose the free tier option and select your region
+- Create a new database and call it 'mindfultimer_db'
+- Create Collections named **TBA**
+
+### Deploy locally
+- To run the project locally, in the terminal type `python3 app.py`
+- This will open a localhost address, which is provided in the CLI
+- Either copy and paste the url into a new browser tab, or hover over it and click the link
+
+### Deploy to Heroku
+
+The website of this project requires back-end technologies such as server, application, and database so the website is deployed on [Heroku](https://www.heroku.com/), which is a cloud platform with a service supporting several programming languages, because GitHub can only host a static websites.
+
+Before deploying the website to Heroku, there are three important steps to follow to make the application work in Heroku correctly.
+
+1. Create `requirements.txt` file that contains the names of packages being used in Python. It is important to update the file if other packages or modules are installed during the project.
+2. Create `Procfile` that contains the name of the application file so that Heroku knows what to run.
+3. Push them into GitHub.
+
+Once above steps have been followed the website can be deployed. Please find the steps of the deployment in Heroku:
+
+1. Create an account in [Heroku](https://signup.heroku.com/login)
+2. Click **New** & **Create new app** to create a new app
+3. Put an app name, which must be unique, choose a region and click create app
+4. Go to **Deploy** section and click **Connect to GitHub**
+5. Search for the repository by the repository name and connect it
+6. Before clicking Enable Automatic Deploys, hidden variables such as IP address, PORT, SECRET_KEY, MONGO_URI and MONGO_DATABASE need to be recorded in Heroku. Go to **Settings**, click **Reveal Config Vars** and fill out necessary keys and values.
+7. Once all the hidden variables are recorded, then click **Enable Automatic Deploys** and click **Deploy Branch** (Main should be selected unless you want other branches to be deployed).
+8. When the app is deployed by Heroku correctly, there is a confirmation message and you can access the app.
+
+**Note**<br>
+*It is important NOT to set `debug=True` when deploying the website.*
+
 
 # Credits
 
