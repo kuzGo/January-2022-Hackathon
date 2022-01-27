@@ -21,7 +21,7 @@ if os.environ.get("FDT") == "ON":
 # --- // Application Factory Setup (based on the Flask-User example for MongoDB)
 # https://flask-user.readthedocs.io/en/latest/mongodb_app.html
 # Setup Flask and load app.config
-app = Flask(__name__, static_folder="static", template_folder="templates")
+app = Flask(__name__, static_folder="assets", template_folder="templates")
 app.config.from_object(__name__ + ".ConfigClass")
 csrf = CSRFProtect(app)
 csrf.init_app(app)
@@ -107,6 +107,7 @@ def home_page():
             flash("'admin' account not created.", "danger")
             app.logger.critical("'admin' account is created at startup if the user doesn't exist: [FAILURE] - (index.html).")
 
+    return render_template("index.html")
 
 
 # export PRODUCTION=ON | OFF in TEST
