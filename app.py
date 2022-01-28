@@ -108,6 +108,10 @@ def home_page():
 
     return render_template("index.html")
 
+@app.route("/timer")
+def timer():
+    return render_template("timer.html")
+
 
 # export PRODUCTION=ON | OFF in TEST
 # PRODUCTION App -> Settings -> Reveal Config Vars -> KEY: PRODUCTION,
