@@ -13,7 +13,7 @@
                     <source src="" type="audio/mpeg">
                 </audio>
                 <div class="pause">
-                    <img src="" alt="pause">
+                    <i class="fas fa-pause-circle fa-3x icon" aria-hidden="true"></i>
                 </div>
                 <div class="progress">
                     <svg>
@@ -29,28 +29,28 @@
                     </div>
                 </div>
                 <div class="play">
-                    <img src="" alt="play">
+                    <i class="fas fa-play-circle fa-3x icon" aria-hidden="true"></i>
                 </div>
             </div>
             <div class="durations">
-                <div class="duration" audio-duration="10">
-                    <img src="" alt="10 s">
-                    <p>10 s</p>
-                </div>
-                <div class="duration" audio-duration="120">
-                    <img src="" alt="2 min">
+                <div class="duration timer-icon" audio-duration="120">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="timer 2 min" 
+                    class="img-fluid timer-icon">
                     <p>2 min</p>
                 </div>
-                <div class="duration" audio-duration="300">
-                    <img src="" alt="5 min">
+                <div class="duration timer-icon" audio-duration="300">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="timer 5 min" 
+                    class="img-fluid timer-icon">
                     <p>5 min</p>
                 </div>
-                <div class="duration" audio-duration="600">
-                    <img src="" alt="10 min">
+                <div class="duration timer-icon" audio-duration="600">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="timer 10 min" 
+                    class="img-fluid timer-icon">
                     <p>10 min</p>
                 </div>
                 <div class="duration" audio-duration="1200">
-                    <img src="" alt="20 min">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="timer 20 min" 
+                    class="img-fluid timer-icon">
                     <p>20 min</p>
                 </div>
             </div>
