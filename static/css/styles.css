@@ -24,7 +24,7 @@ html, body {
 /* Hero image */
 
 #home-header {
-    background: url('/static/images/jan-2022-hackathon-image.png') no-repeat center;
+    background: url('/static/images/hero-image.jpg') no-repeat center;
     background-size: cover;
     height: 40rem;
 }
