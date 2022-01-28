@@ -1,64 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 html {
-    scroll-behavior: smooth;
-    height: 100%;
+  scroll-behavior: smooth;
+  height: 100%;
 }
 
 html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Navbar */
 
 .navbar-light .navbar-nav .nav-link {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
 }
 
 #brand-logo {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 /* Hero image */
 
 #home-header {
-    background: url('/static/images/hero-image.jpg') no-repeat center;
-    background-size: cover;
-    height: 40rem;
+  background: url('/static/images/hero-image.jpg') no-repeat center;
+  background-size: cover;
+  height: 40rem;
 }
 
 .main-heading {
-    margin-top: 10rem;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #000000;
-    text-shadow: 0.07rem 0.06rem #fafafa;
+  margin-top: 10rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;
+  text-shadow: 0.07rem 0.06rem #fafafa;
+}
+
+/* Timer */
+.icon {
+  color: #17233D;
+}
+
+.timer-icon {
+  height: 70px;
+  width: 70px;
 }
 
 /* Footer */
 footer {
-    background-color: #4A8493;
-    width: 100%;
+  background-color: #4A8493;
+  width: 100%;
 }
 
 #copyright {
-    background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .footer-email a, .footer-phone a {
-    color: #fafafa;
-    text-decoration: underline;
+  color: #fafafa;
+  text-decoration: underline;
 }
 
 a:link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .para-center {
-    padding-top: 3rem;
+  padding-top: 3rem;
 }
 
 /* Media Queries */
