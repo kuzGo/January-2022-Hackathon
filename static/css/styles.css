@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+#brand-logo {
+    width: 60px;
+    height: 60px;
+}
+
+/* Hero image */
+
+#home-header {
+    background: url('/static/images/jan-2022-hackathon-image.png') no-repeat center;
+    background-size: cover;
+    height: 40rem;
+}
+
+.main-heading {
+    margin-top: 10rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #000000;
+    text-shadow: 0.07rem 0.06rem #fafafa;
+}
+
+/* Footer */
+footer {
+    background-color: #4A8493;
+    width: 100%;
+}
+
+#copyright {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.footer-email a, .footer-phone a {
+    color: #fafafa;
+    text-decoration: underline;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.para-center {
+    padding-top: 3rem;
+}
+
+/* Media Queries */
