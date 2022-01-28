@@ -144,14 +144,56 @@
     {% block content %}{% endblock %}
     {% endblock %}
 
-    <footer class="page-footer transparent">
-        <div class="footer-copyright blue darken-4">
-            <div class="left-align">{{ user_manager.USER_APP_NAME }} {{ user_manager.USER_APP_VERSION }}</div>
-            <div class="right-align">&copy; {{ user_manager.USER_COPYRIGHT_YEAR }}
-                {{ user_manager.USER_CORPORATION_NAME }}</div>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white">
+        <div class="container-fluid p-4 pb-0">
+            <div class="row pb-3">
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0 pe-2">
+                    <h5>Mindful Timer</h5>
+                    <p>
+                        <small>
+                            Our main purpose is to provide resources that will encourage people...
+                        </small>
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0 d-md-none d-lg-block">
+                    <h5 class="text-uppercase">links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#" class="text-white">TBA</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white">TBA</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white">TBA</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white">TBA</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0 footer-contact">
+                    <h5 class="text-uppercase">contact</h5>
+                    <p class="footer-email">
+                        <strong>Email:</strong>
+                        <a href="mailto:tba.info@gmail.com">
+                            tba.info@gmail.com
+                        </a>
+                    </p>
+                    <p class="footer-phone">
+                        <strong>Tel:</strong>
+                        <a href="tel:+353875555222">
+                            +353 (0) 875555222
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <hr class="mb-4" />
         </div>
-
-
+        <div class="text-center p-3" id="copyright">
+            © 2022 Mindful Timer
+        </div>
     </footer>
     
     <!-- Bootstrap JavaScript, Popper, jQuery -->
