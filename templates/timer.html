@@ -1,77 +1,80 @@
 {% extends "flask_user_layout.html" %}
 {% block content %}
-    <div class="container">
-        <div class="video">
-            <video autoplay loop>
-                <source src="" type="video/mp4">
-            </video>
-        </div>
 
-        <div class="app">
-            <div class="audio">
-                <audio>.
-                    <source src="" type="audio/mpeg">
-                </audio>
-                <div class="pause">
-                    <i class="fas fa-pause-circle fa-3x icon" aria-hidden="true"></i>
-                </div>
-                <div class="progress">
-                    <svg>
-                        <rect class="rect1" stroke-width="10" rx="8" height="150" width="150" y="25" x="25"
-                            stroke="#F07281" fill="transparent"></rect>
-                    </svg>
-                    <svg>
-                        <rect class="rect" stroke-width="10" rx="8" height="150" width="150" y="25" x="25"
-                            stroke="#FFFFFF" fill="transparent"></rect>
-                    </svg>
-                    <div class="audio-remaining-time">
-                        00:00
-                    </div>
-                </div>
-                <div class="play">
-                    <i class="fas fa-play-circle fa-3x icon" aria-hidden="true"></i>
+<div class="container">
+    <div class="video">
+        <video autoplay loop>
+            <source src="{{ url_for('static', filename='videos/budha.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="app">
+        <div class="audio">
+            <audio>
+                <source src="{{ url_for('static', filename='videos/meditation.mp3') }}" type="audio/mpeg">
+            </audio>
+            <div class="pause">
+                <i class="fas fa-pause-circle fa-3x icon" aria-hidden="true"></i>
+            </div>
+
+            <div class="progress">
+                <svg>
+                    <rect class="rect1" stroke-width="10" rx="8" height="150" width="150" y="25" x="25" stroke="#F07281"
+                        fill="transparent"></rect>
+                </svg>
+                <svg>
+                    <rect class="rect" stroke-width="10" rx="8" height="150" width="150" y="25" x="25" stroke="#FFFFFF"
+                        fill="transparent"></rect>
+                </svg>
+
+                <div class="audio-remaining-time">
+                    00:00
                 </div>
             </div>
-            <div class="durations">
-                <div class="duration timer-icon" audio-duration="120">
-                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="timer 2 min" 
-                    class="img-fluid timer-icon">
-                    <p>2 min</p>
-                </div>
-                <div class="duration timer-icon" audio-duration="300">
-                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="timer 5 min" 
-                    class="img-fluid timer-icon">
-                    <p>5 min</p>
-                </div>
-                <div class="duration timer-icon" audio-duration="600">
-                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="timer 10 min" 
-                    class="img-fluid timer-icon">
-                    <p>10 min</p>
-                </div>
-                <div class="duration" audio-duration="1200">
-                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="timer 20 min" 
-                    class="img-fluid timer-icon">
-                    <p>20 min</p>
-                </div>
+            <div class="play">
+                <i class="fas fa-play-circle fa-3x icon" aria-hidden="true"></i>
             </div>
-            <div class="seasons">
-                <div class="season" video-src="">
-                    <img src="" alt="winter">
-                </div>
-                <div class="season" video-src="">
-                    <img src="" alt="spring">
-                </div>
-                <div class=" " video-src="">
-                    <img src="" alt="summer">
-                </div>
-                <div class="season" video-src="">
-                    <img src="" alt="autumn">
-                </div>
-                <div class="toggle-menu">
-                    <img src="" alt="open menu">
-                </div>
+        </div>
+        <div class="durations">
+            <div class="duration" audio-duration="120">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="timer 2 min">
+                <p>2 min</p>
+            </div>
+            <div class="duration" audio-duration="300">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="timer 5 min">
+                <p>5 min</p>
+            </div>
+            <div class="duration" audio-duration="600">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="timer 10 min">
+                <p>10 min</p>
+            </div>
+            <div class="duration" audio-duration="1200">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="timer 20 min">
+                <p>20 min</p>
+            </div>
+        </div>
+        <div class="seasons">
+            <div class="season" video-src="{{ url_for('static', filename='videos/ocean.mp4') }}" type='video/mp4'>
+                <i class="fas fa-water fa-3x icon"></i>
+            </div>
+            <div class="season" video-src="{{ url_for('static', filename='videos/rain.mp4') }}" type='video/mp4' >
+                <i class="fas fa-cloud-rain fa-3x icon"></i>
+            </div>
+            <div class="season" video-src="{{ url_for('static', filename='videos/fire.mp4') }}" type='video/mp4'>
+                <i class="fab fa-gripfire fa-3x icon"></i>
+            </div>
+            <div class="season" video-src="{{ url_for('static', filename='videos/fish.mp4') }}" type='video/mp4'>
+                <i class="fas fa-fish fa-3x icon"></i>
+            </div>
+            <div class="toggle-menu">
+                <i class="fas fa-chevron-right fa-3x icon"></i>
             </div>
         </div>
     </div>
-    <!-- JS -->
+</div>
+<!-- JS -->
+
+<script src="./static/js/app.js"></script>
+<script src="./static/js/innactive.js"></script>
+<script src="./static/js/toggle.js"></script>
 {% endblock %}
