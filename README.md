@@ -21,6 +21,7 @@ Thus, the website's main features are several timers that are activated at the s
 
 ## User Stories
 
+
 ### Site Owner goals
 
 
@@ -34,6 +35,31 @@ Thus, the website's main features are several timers that are activated at the s
 
 
 # Design
+## Surface
+
+**Colour Scheme**
+
+We have chosen for the website colours: blue, turquoise and green which are often described as peaceful and stress relief  and are associated with balance and **emotional stability**.
+
+Referring to the colour psychology websites [very well mind](https://www.verywellmind.com/color-psychology-green-2795817) and [graf1x](https://graf1x.com/color-psychology-emotion-meaning-poster/)  
+
+**Blue** calls to mind feelings of **calmness** or serenity and peace. It is often described as peaceful, tranquil, secure, and orderly. It is used to **reduce to stress**, create calmness and relax 
+
+Blue is often used to decorate offices because research has shown that people are more productive in blue rooms. 
+
+**Green** is the colour of growth and **health**. Green has strong association as a **refreshing** and **peaceful colour**. 
+
+Green is the colour of nature and has a calming effect and is often considered relaxing and refreshing colour has been found to influence not only our emotions but our memories. One study provided a group of people with a list of emotionally charged words written in different colours. Therefore, the colour green might give us an optimism bias when it comes to remembering information.
+
+**Turquoise** is a shade of blue that lies on the scale between blue and green. It has characteristics associated with both of these, such as the **calmness** of blue and the **growth** that is represented in green. Turquoise can also has the energy that yellow transmits, becoming an uplifting colour.
+
+The colour turquoise is associated with meanings of refreshing, feminine, calming, sophisticated, energy, wisdom, serenity, wholeness, **creativity**, **emotional balance**, spiritual grounding, friendship.
+
+Turquoise is linked to calmness, serenity and peace of mind, as well as to **mental clarity**.
+
+Turquoise encourages creativity. It is a colour linked to the ocean. It is also associated with balance and **emotional stability**. Turquoise has the characteristics of blue, green and yellow.
+
+![colour scheme palette](/static/images/proposed-color-scheme-1.png)
 
 # Wireframes
 
