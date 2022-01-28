@@ -1,6 +1,6 @@
 # Project: Code Institute January 2022 Hackathon with SODA Social: Mindfulness and Wellbeing
 
-![](assets/images/jan-2022-hackathon-image.png)
+![](static/images/jan-2022-hackathon-image.png)
 
 # Team: 09
 
