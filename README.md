@@ -59,7 +59,8 @@ Turquoise is linked to calmness, serenity and peace of mind, as well as to **men
 
 Turquoise encourages creativity. It is a colour linked to the ocean. It is also associated with balance and **emotional stability**. Turquoise has the characteristics of blue, green and yellow.
 
-![colour scheme palette](/static/images/proposed-color-scheme-1.png)
+![proposed-colour-scheme-1](/static/images/proposed-colour-scheme-1.png)
+
 
 # Wireframes
 
