@@ -10,11 +10,11 @@
 
 This website is a project for Code Institute's January 2022 Hackathon, hosted in collaboration with digital recruitment firm SODA and their networking event SODA Social. The theme of the Hackathon was mindfulness and wellbeing in the workplace. 
 
-The website was created by Naoise Gaffney, Marina Pavlovic, Goran Kuzma, Eva Kuk and Adam Boley, with the project facilitated by Aisha Bushell
+The website was created by Naoise Gaffney, Marina Pavlovic, Goran Kuzma, Eva Kuk and Adam Boley, with the project facilitated by Aisha Bushell.
 
 The aim of the project is to help digital workers - those working in offices and those working from home - maintain their wellbeing and mindfulness whilst working. When working in an office, workers are often sitting down for long periods, and may not have particularly ergonomic workstations. Those working from home face these issues as well, and more besides - when working from home, it is all too easy for work time to spill over into personal time, with workers constantly in "work-mode", and unable to switch off from work. 
 
-Thus, the website's main features are several timers that are activated at the start of the day. Each timer counts down from a fixed value, and when it expires, it flashes up a message and plays a soft audio tune to alert the user. The message reminds the user to do one of several tasks - drink some water, do some breathing exercises, do some stretching, eat lunch, go for a walk and finally stop work. The idea is to break up the user's day and try to prevent burnout by giving their brain a break. The message to stop work should stop users from working more than their hours and protect their personal time, allowing them to relax and rest
+Thus, the website's main feature is an adjustable timer with options of for 2 minutes, 5 minutes, 10 minutes and 20 minutes that can be activated by a user. The timer allows users to take some time away from work to focus on their own wellbeing by drinking some water, doing some breathing exercises, or taking a short walk. The idea is to break up the user's day and try to prevent burnout by giving their brain a break. 
 
 
 # User Experience
