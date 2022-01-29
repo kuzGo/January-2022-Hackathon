@@ -1,19 +1,57 @@
 {% extends "flask_user_layout.html" %}
 
 {% block content %}
-    <!-- Hero section -->
-    <div id="home-header">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-12 my-auto">
-                    <h1 class="main-heading text-uppercase animate__animated animate__backInDown  animate__delay-1s mt-5 mb-3">
-                        Welcome to Mindful Timer!
-                    </h1>
-                    <h3 class="sub-heading  animate__animated animate__backInUp animate__delay-1s">
-                        Mindful ...
-                    </h3>
-                </div>
-            </div>
-        </div>
+<!-- Hero section -->
+<div id="home-header">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-12 my-auto">
+        <h1 class="main-heading text-uppercase animate__animated animate__backInDown  animate__delay-1s mt-5 mb-3">
+          Welcome to Mindful Timer!
+        </h1>
+        <h3 class="sub-heading  animate__animated animate__backInUp animate__delay-1s">
+          Mindful ...
+        </h3>
+      </div>
     </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/meditate.jpg') }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Mindfulness Habits You Can Practice Everyday</h5>
+          <p class="card-text">In a sense, meditation is the art of mindfulness. In meditating, you are taking the time
+            to connect with your mind. It does take some time to practice controlled breathing and to shutout all of the
+            distractions, but it can be beneficial in so many way</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/zen.jpg') }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Easy yoga poses for beginners to build strength, flexibility, and mental clarity</h5>
+          <p class="card-text">Yoga can be practiced in-person either at a studio, gym, or recreation center or
+            virtually with online videos. When starting out, opt for a gentle class like restorative yoga, and let the
+            teacher know you're a beginner so they can modify poses.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/yoga.jpg') }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Yoga improves mental health,improves flexibility,helps with stress relief.</h5>
+          <p class="card-text">Major depressive disorder (MDD) is thought to be one of the most common mental health
+            disorders in the world.Both movement-based yoga therapies and breathing-based practices have been shown to
+            significantly improve depressive symptoms.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
