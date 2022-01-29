@@ -423,3 +423,34 @@ a:link {
       margin-top: -9rem;
     }
   }
+
+/* LOGIN PAGE */
+#login-header {
+  background: url('/static/images/hero-image.jpg') no-repeat center;
+  background-size: cover;
+  height: 40rem;
+}
+.header-font-style {
+  color: #EFFAFB;
+}
+
+.background-style {
+  background-color: #effafb82;
+  border-radius: 13px;
+}
+.form-control{
+  background-color: transparent;
+  border: none;
+  height: 3rem;
+  margin: 0 0 8px 0;
+}
+.btn-style{
+  color: #fff;
+  background-color: #b9de54;
+  border-color: #b9de54;
+  transition: background-color .2s ease-out
+}
+.btn-style:hover{
+  background-color: #b9de54;
+  border-color: #b9de54;
+}
