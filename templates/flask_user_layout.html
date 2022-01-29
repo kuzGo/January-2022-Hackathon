@@ -184,7 +184,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 
     <!-- Internal script file -->
-
+    <!-- Message Chip Timeout -->
+    <script src="{{ url_for('static', filename = 'js/message.js') }}"></script>
     {# *** Allow sub-templates to insert extra html to the bottom of the body *** #}
     {% block extra_js %}{% endblock %}
 </body>
