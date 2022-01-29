@@ -1,25 +1,35 @@
 {% extends "flask_user_layout.html" %}
 {% block content %}
 
-<h1 class="center-align">Log In</h1>
 
-<section id="hero-image-login">
-    <div class="container-fluid">
-        <div class="row">
-            <form class="col" method="POST" action="{{ url_for('login') }}">
+
+<section id="home-header">
+    <div class="container-fluid h-100 w-100 d-flex justify-content-center align-items-center">
+        
+        <div class="row w-75">
+            
+            <form class="col-12 col-md-6 shadow-lg background-style p-2" method="POST" action="{{ url_for('login') }}">
+                <h1 class="text-center text-white header-font-style">Log In</h1>
                 <!--username or email-->
                 <div class="mb-3">
-                    <label for="username" class="form-label">Username or Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <i class="fas fa-email prefix"></i>
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control"  id="email" placeholder="Email Address" aria-describedby="emailHelp">
                 </div>
                 <!--password-->
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{8,20}$" class="validate" required>
+                    <input type="password" class="form-control" id="password" placeholder="Password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{8,20}$" class="validate" required>
                 </div>
-                <button type="login" class="btn btn-primary">Login</button>
+                <!--login-->
+                <button type="login" class="btn btn-style">Login</button>
+                <div class="col s12">
+                    <p class="center-align"> Don't have an account? 
+                        <a href="#">Register here</a>
+                    </p>
+                    
+                </div>
             </form>
         </div>
-    </div>
 </section>
 {% endblock %}
