@@ -20,7 +20,7 @@ class ConfigClass(object):
 
     # Flask-User settings
     # Shown in email templates and page footers
-    USER_APP_NAME = "Team 9 Application"
+    USER_APP_NAME = "Mindful Timer"
     USER_ENABLE_EMAIL = True                    # Enable email authentication
     USER_ENABLE_USERNAME = True                 # Enable username authentication
     USER_ENABLE_CONFIRM_EMAIL = True            # Enable email after registration
@@ -46,4 +46,4 @@ class ConfigClass(object):
 
     # Flask User Manager Configuration
     USER_COPYRIGHT_YEAR = 2022
-    USER_CORPORATION_NAME = "Team 9"
+    USER_CORPORATION_NAME = "Mind O'Holics"

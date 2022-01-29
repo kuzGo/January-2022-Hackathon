@@ -83,7 +83,7 @@ def home_page():
     The user creation is here as it will be created twice on Heroku if placed in the main code.
     """
     if current_user.is_authenticated:
-        return redirect(url_for("member_page"))
+        return redirect(url_for("timer"))
 
     # Create admin user as first/default user, if admin does not exist.
     # Password and e-mail are set using environment variables.
@@ -108,21 +108,39 @@ def home_page():
 
     return render_template("index.html")
 
-# Temporary route
+# Main MindTimer Application Page
+@login_required
 @app.route("/timer")
 def timer():
+    """
+    The "R" in CRUD, authenticated user access to the MindTimer Application.
+    """
     return render_template("timer.html")
 
-# Create error pages
-# Invalid URL
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template("404.html"), 404
 
-# Internal server error
+# --- // Error Handlers for 400 CSRF Error (Bad Request), 404 Page Not Found, 405 Method Not Allowed, and 500 Internal Server Error.
+@app.errorhandler(CSRFError)
+def handle_csrf_error(error):
+    excuse = "Apologies, the Security Detail have omitted to secure this page! We're calling them back from their lunch-break to fix this. Please click on the pink pulsating buoy to go to the Home Page (registering or signing in) or Member's Page (signed in), or click on Sign Out below."
+    return render_template("oops.html", error=error.description, excuse=excuse, error_type="Client: 400 - Bad Request")
+
+
+@app.errorhandler(404)
+def not_found_404(error):
+    excuse = "Apologies, we're all lost and have no idea how this happened! Please click on the pink pulsating buoy to go to the Home Page (registering or signing in) or Member's Page (signed in), or click on Sign Out below."
+    return render_template("oops.html", error=error, excuse=excuse, error_type="Client: 404 - Page Not Found")
+
+
+@app.errorhandler(405)
+def not_found_405(error):
+    excuse = "Apologies, our we can't allow you to do this! Please click on the pink pulsating buoy to go to the Home Page (registering or signing in) or Member's Page (signed in), or click on Sign Out below."
+    return render_template("oops.html", error=error, excuse=excuse, error_type="Client: 405 - Method Not Allowed")
+
+
 @app.errorhandler(500)
-def page_not_found(e):
-    return render_template("500.html"), 500
+def internal_error(error):
+    excuse = "Apologies, something serious occurred and we're working on resolving the issue! This section is cordoned off for now. Please click on the pink pulsating buoy to go to the Home Page (registering or signing in) or Member's Page (signed in), or click on Sign Out below."
+    return render_template("oops.html", error=error, excuse=excuse, error_type="Server: 500 - Internal Server Error")
 
 
 # export PRODUCTION=ON | OFF in TEST
