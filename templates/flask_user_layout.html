@@ -46,15 +46,16 @@
         <div class="container">
             <div class="row mb-2">
                 <nav class="navbar navbar-expand-lg navbar-light py-lg-2">
+                    <a class="navbar-brand d-md-flex bigify grow" href="{{ url_for('home_page')}}">
+                        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"
+                            class="d-inline-block align-text-top" id="brand-logo" loading="lazy">
+                        <span class="navbar-text"> MindfulTimer</span>
+                    </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                        <span><i class="fas fa-brain fa-2x icon"></i></span>
+                        <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand d-md-flex bigify grow" href="#">
-                        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"
-                            class="d-inline-block align-text-top" id="brand-logo" loading="lazy">
-                    </a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item text-uppercase pe-5">
@@ -64,37 +65,13 @@
                                 <a class="nav-link" href="{{ url_for('timer')}}">Timer</a>
                             </li>
                             <li class="nav-item text-uppercase pe-5">
-                                <a class="nav-link" href="login.html">Login</a>
+                                <a class="nav-link" href="#">News</a>
+                            </li>
+                            <li class="nav-item text-uppercase pe-5">
+                                <a class="nav-link" href="#">Login</a>
                             </li>
                             <li class="nav-item text-uppercase pe-5">
                                 <a class="nav-link" href="#">Register</a>
-                            </li>
-                            <li class="nav-item dropdown list-unstyled text-lg-right d-none d-lg-block ps-5">
-                                <a class="nav-link text-black" href="#" id="navbarScrollingDropdown" 
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fas fa-user fa-lg icon"></i>
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                    {% if user!="guest" %}
-                                        <li>
-                                            <a class="dropdown-item" href="#">TBA</a>
-                                        </li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">LOGOUT</a>
-                                        </li>
-                                    {% endif %}
-                                    {% if user =="guest" %}
-                                        <li>
-                                            <a class="dropdown-item" href="#">LOGIN</a>
-                                        </li>
-                                    {% endif %}
-                                </ul>
-                            </li>
-                            <li>
-                                <hr class="d-lg-none">
                             </li>
                             {% if user=="guest" %}
                                 <li class="nav-item text-uppercase d-lg-none">
@@ -104,16 +81,6 @@
                                 </li>
                             {% endif %}
                             {% if user!="guest" %}
-                                <li class="nav-item text-uppercase d-lg-none">
-                                    <a class="nav-link admin-user-mobile" href="#">
-                                        Create admin
-                                    </a>
-                                </li>
-                                <li class="nav-item text-uppercase d-lg-none">
-                                    <a class="nav-link admin-user-mobile" href="#">
-                                        Manage admins
-                                    </a>
-                                </li>
                                 <li class="nav-item text-uppercase d-lg-none">
                                     <a class="nav-link admin-user-mobile" href="#">
                                         Logout
