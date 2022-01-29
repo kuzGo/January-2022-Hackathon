@@ -117,6 +117,9 @@ def timer():
     """
     return render_template("timer.html")
 
+@app.route("/news")
+def news():
+    return render_template("news.html")
 
 # --- // Error Handlers for 400 CSRF Error (Bad Request), 404 Page Not Found, 405 Method Not Allowed, and 500 Internal Server Error.
 @app.errorhandler(CSRFError)
