@@ -83,7 +83,7 @@ def home_page():
     The user creation is here as it will be created twice on Heroku if placed in the main code.
     """
     if current_user.is_authenticated:
-        return redirect(url_for("member_page"))
+        return redirect(url_for("timer"))
 
     # Create admin user as first/default user, if admin does not exist.
     # Password and e-mail are set using environment variables.
