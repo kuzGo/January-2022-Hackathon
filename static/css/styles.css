@@ -169,8 +169,8 @@ a:link {
 @media only screen 
   and (min-width : 768px) 
   and (max-width : 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
+  and (-webkit-min-device-pixel-ratio: 1) {}
+  
 /* Timer */
 .icon {
   color: #3BBFCE;
@@ -309,7 +309,7 @@ a:link {
 .progress {
   background-color: transparent!important;
 }
-
+  
 /* FOR SMALL SCREENS */
 @media only screen and (min-width: 320px) and (max-width: 823px){
   /* VIDEO */
@@ -417,7 +417,7 @@ a:link {
   .toggle-menu img {
       width: 20px;
   }
-
+}
 
 /* Display on large devices */
 @media screen 
