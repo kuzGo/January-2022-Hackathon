@@ -1,0 +1,26 @@
+{% extends "flask_user_layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col align-content-center">
+            <div class="card align-content-center">
+                <div class="card-img align-content-center">
+                    <img src="/static/images/roadworks.jpeg" alt="Just your typical roadworks sign">
+                    <a href="{{ url_for('home_page')}}" class="halfway-fab btn-floating pink pink-darken-1 pulse">
+                        <i class="material-icons">support</i>
+                    </a>
+                </div>
+                <div class="card-body align-content-center">
+                    <span class="card-title pink-text text-darken-1">{{error_type}}</span>
+                    <p>{{excuse}}</p>
+                    <p>&nbsp;</p>
+                    <p>Book Repository Message - {{error}}</p>
+                </div>
+                <div class="card-action">
+                    <a href="{{ url_for('user.logout') }}">[ Sign Out <i class="material-icons">pan_tool</i> ]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
