@@ -173,14 +173,9 @@ a:link {
 
 /* Timer */
 .icon {
-  color: #17233D;
+  color: #3BBFCE;
+  cursor: pointer;
 }
-
-.timer-icon {
-  height: 70px;
-  width: 70px;
-}
-
 .video {
   width: 100vw;
   height: 100vh;
@@ -207,7 +202,11 @@ a:link {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-areas: "a a a a s s" "a a a a s s" "d d d d s s" "d d d d s s";
+  grid-template-areas:
+  "a a a a s s s s s"
+  "a a a a s s s s s" 
+  "d d d d s s s s s" 
+  "d d d d s s s s s";
 
   transition: opacity 500ms ease-in-out;
 }
@@ -227,12 +226,11 @@ a:link {
   cursor: pointer;
 }
 .audio .progress {
-  width: 200px;
-  height: 200px;
-
+  width: 223px;
+  height: 228px;
   position: relative;
-
   margin: 0 40px;
+  padding: 13px;
 }
 .audio .progress svg {
   width: 200px;
@@ -276,7 +274,7 @@ a:link {
   filter: drop-shadow(0px 0px 15px #222);
 }
 .durations .duration p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", sans-serif;
   font-size: 1.1rem;
   font-weight: bold;
 
@@ -293,8 +291,10 @@ a:link {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 40% 0;
+  margin-bottom: 13rem;
+  margin-right: 3rem;
 }
+
 .seasons .season img {
   width: 75px;
   cursor: pointer;
@@ -306,8 +306,12 @@ a:link {
   display: none;
 }
 
+.progress {
+  background-color: transparent!important;
+}
+
 /* FOR SMALL SCREENS */
-@media screen and(max-width: 600px) {
+@media only screen and (min-width: 320px) and (max-width: 823px){
   /* VIDEO */
   .video video {
       height: 100%;
@@ -315,17 +319,24 @@ a:link {
 
   /* APP */
   .app {
-      grid-template-areas: "a" "a" "a" "d";
+      grid-template-areas:
+            "a"
+            "a" 
+            "a"
+            "d";
   }
   .progress {
     background-color: transparent!important;
   }
   /* AUDIO */
+  .audio {
+    margin-right: 24px;
+  }
   .audio .progress {
-      width: 175px;
-      height: 175px;
-
-      margin: 0 10px;
+    width: 193px;
+    height: 190px;
+    margin: 0 10px;
+    padding: 12px;   
   }
   .audio .play img,
   .pause img {
@@ -348,6 +359,7 @@ a:link {
   /* DURATIONS */
   .durations {
       padding: 0 10%;
+      margin-right: 15px;
   }
   .durations .duration img {
       width: 60px;
@@ -359,13 +371,12 @@ a:link {
   /* SEASONS */
   .seasons {
       position: absolute;
-      top: 20px;
-      left: -250px;
-      padding: 5px;
-
+      top: 20%;
+      font-size: 14px;
+      left: -215px;
       flex-direction: row;
 
-      background-color: #fff;
+      background-color: #4A8493;
 
       border-radius: 0 5px 5px 0;
 

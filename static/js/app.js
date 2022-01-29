@@ -66,7 +66,6 @@ function update() {
 
   if (!audio.paused) {
     requestAnimationFrame(update);
-    console.log("update");
   }
 }
 update();
