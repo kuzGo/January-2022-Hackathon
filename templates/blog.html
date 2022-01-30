@@ -1,142 +1,67 @@
 {% extends "flask_user_layout.html" %}
 
 {% block content %}
-  <div id="news-header">
-      <div class="container">
-          <div class="row text-center">
-              <div class="col-lg-12 my-auto">
-                  <h1 class="main-heading text-uppercase">
-                      Articles on Mindfulness 
-                  </h1>
-                  <h3 class="sub-heading">
-                      The latest news and updates.
-                  </h3>
-              </div>
-          </div>
-      </div>
-  </div>
-  <section>
-      <div class="container">
-          <div class="row text-center">
-              <h2 class="section-heading text-uppercase">Blog</h2>
-          </div>
-      </div>
-      <div class="container">
-          <div class="row">
-              <div class="col-12">
-                  <p class="font-italic lead pt-5">
-                      Looking for the latest articles on mindfulness and wellbeing? You've come to the right place! MindfulTimer team is always on the hunt for
-                      meaningful topics about your wellbeing.
-                  </p>
-              </div>
-              </ul>
-          </div>
-      </div>
-      <div class="container">
-          <div class="row mt-5">
-              <div class="col-lg-4 col-md-6 mb-5 justify-content-center d-flex">
-                  <article class="article-post mx-auto">
-                      <figure class="article">
-                          <div class="article-overlay">
-                              <a href="#">
-                                  <img src="{{ url_for('static', filename='images/meditate.jpg') }}" class="card-img-top img-fluid" alt="article image">
-                              </a>
-                          </div>
-                      </figure>
-                      <div class="article-content">
-                          <div class="article-header">
-                              <h5 class="article-card-title">
-                                  <a href="#"
-                                      class="article-link">Mindfulness Habits You Can Practice Everyday</a>
-                              </h5>
-                              <div class="article-meta text-muted">
-                                  Credit: Project Happiness
-                              </div>
-                          </div>
-                          <div class="article-overview article-card-text">
-                              <p>
-                                In a sense, meditation is the art of mindfulness. In meditating, you are taking the time
-                                to connect with your mind.
-                              </p>
-                          </div>
-                          <div class="article-footer">
-                              <div class="row">
-                                  <div class="col-6 text-left footer-link">
-                                      <span>
-                                          <a href="#">
-                                              <a href="#"
-                                                  class="article-link">Read more</a>
-                                          </a>
-                                      </span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </article>
-              </div>
-              <div class="col-lg-4 col-md-6 mb-5 justify-content-center d-flex">
-                <article class="article-post mx-auto">
-                    <figure class="article">
-                        <div class="article-overlay">
-                            <a href="#">
-                                <img src="{{ url_for('static', filename='images/yoga.jpg') }}" class="card-img-top img-fluid" alt="article image">
-                            </a>
-                        </div>
-                    </figure>
-                    <div class="article-content">
-                        <div class="article-header">
-                            <h5 class="article-card-title">
-                                <a href="#"
-                                    class="article-link">Easy yoga poses for beginners</a>
-                            </h5>
-                            <div class="article-meta text-muted">
-                                Credit: Project Happiness
-                            </div>
-                        </div>
-                        <div class="article-overview article-card-text">
-                            <p>
-                                Yoga can be practiced in-person either at a studio, gym, or recreation center or
-                                virtually with online videos.
-                            </p>
-                        </div>
-                        <div class="article-footer">
-                            <div class="row">
-                                <div class="col-6 text-left footer-link">
-                                    <span>
-                                        <a href="#">
-                                            <a href="#"
-                                                class="article-link">Read more</a>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+<div id="news-header">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-12 my-auto">
+                <h1 class="main-heading text-uppercase">
+                    Articles on Mindfulness
+                </h1>
+                <h3 class="sub-heading">
+                    The latest news and updates.
+                </h3>
             </div>
+        </div>
+    </div>
+</div>
+<section>
+    <div class="container">
+        <div class="row text-center">
+            <h2 class="section-heading text-uppercase">Blog</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="font-italic lead pt-5">
+                    Looking for the latest articles on mindfulness and wellbeing? You've come to the right place!
+                    MindfulTimer team is always on the hunt for
+                    meaningful topics about your wellbeing.
+                </p>
+            </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+
+            {% if blogs_pagination.items %}
+            {% if blogs_pagination %}
+            {% for blog in blogs_pagination.items %}
             <div class="col-lg-4 col-md-6 mb-5 justify-content-center d-flex">
                 <article class="article-post mx-auto">
                     <figure class="article">
                         <div class="article-overlay">
                             <a href="#">
-                                <img src="{{ url_for('static', filename='images/zen.jpg') }}" class="card-img-top img-fluid" alt="article image">
+                                <img src="{{ blog.image_link }}" class="card-img-top img-fluid" alt="article image">
                             </a>
                         </div>
                     </figure>
                     <div class="article-content">
                         <div class="article-header">
                             <h5 class="article-card-title">
-                                <a href="#"
-                                    class="article-link">Easy yoga poses for beginners</a>
+                                <a href="#" class="article-link">{{ blog.title }}</a>
                             </h5>
                             <div class="article-meta text-muted">
-                                Credit: Project Happiness
+                                {{ blog.short_description }}
                             </div>
                         </div>
                         <div class="article-overview article-card-text">
                             <p>
-                                Yoga can be practiced in-person either at a studio, gym, or recreation center or
-                                virtually with online videos.
+                                {{ blog.comments }}
                             </p>
                         </div>
                         <div class="article-footer">
@@ -144,8 +69,7 @@
                                 <div class="col-6 text-left footer-link">
                                     <span>
                                         <a href="#">
-                                            <a href="#"
-                                                class="article-link">Read more</a>
+                                            <a href="#" class="article-link">Read more</a>
                                         </a>
                                     </span>
                                 </div>
@@ -154,7 +78,44 @@
                     </div>
                 </article>
             </div>
-          </div>
-      </div>
-  </section>
+
+            {% endfor %}
+            {% endif %}
+            {% endif %}
+
+            <div class="container">
+                {# Macro for creating navigation links #}
+                {% macro render_navigation(pagination, endpoint) %}
+
+                <div class="pagination">Page #:
+                    {% if page_prev == 0 %}
+                    &lt;&nbsp;
+                    {% else %}
+                    <a href="{{ url_for(endpoint, page=page_prev) }}">&lt;&nbsp;</a>
+                    {% endif %}
+                    {% if pagination.has_next %}
+                    <a href="{{ url_for(endpoint, page=page_next) }}">&gt;&nbsp;</a>
+                    {% else %}
+                    &gt;&nbsp;
+                    {% endif %}
+                    {% for page in pagination.iter_pages() %}
+                    {% if page %}
+                    {% if page != pagination.page %}
+                    <a href="{{ url_for(endpoint, page=page) }}">{{ page }}</a>
+                    {% else %}
+                    <span style="background-color: #0D47A1; color: white; padding: 1px 5px;">{{ page }}</span>
+                    {% endif %}
+                    {% else %}
+                    <span class="ellipsis">…</span>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                {% endmacro %}
+
+                {{ render_navigation(blogs_pagination, 'blog') }}
+            </div>
+            &nbsp;
+        </div>
+    </div>
+</section>
 {% endblock %}
