@@ -44,11 +44,100 @@ span.navbar-text {
 .main-heading {
   margin-top: 10rem;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-weight: 600;
   color: #000000;
-  text-shadow: 0.07rem 0.06rem #fafafa;
+  text-shadow: 0.07rem 0.07rem #fafafa;
 }
+
+/* News page */
+#news-header {
+  background: url('/static/images/news.jpg') no-repeat center;
+  background-size: cover;
+  height: 40rem;
+}
+
+.sub-heading {
+  color: #fafafa;
+  text-shadow: 0.25rem 0.25rem 0.8rem #343a40;
+}
+
+.section-heading {
+  margin-top: 3rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+}
+
+.article-image {
+  height: 50%;
+  width: 50%;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post .article-header {
+  margin-bottom: 0.94rem;
+}
+
+.article-post {
+  width: 85%;
+  margin-bottom: 4rem;
+}
+
+.article-post .article-content {
+  -webkit-box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.15);
+  padding: 1.875rem;
+  position: relative;
+  background: #fff;
+  margin-top: -4.68rem;
+}
+
+.article-post .article-overlay {
+  position: relative;
+  left: 1.35rem;
+  margin-bottom: 0;
+}
+
+.article-post .article-overview p:last-of-type {
+  margin-bottom: 0;
+}
+
+.article-post .article-footer {
+  border-top: 1px solid #ebebeb;
+  padding-top: 0.94rem;
+  margin-top: 1.25rem;
+}
+
+.card-img-top {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.article-card-title a {
+  color: #439B94;
+}
+
+.footer-link>a {
+  color: #56C3D4;
+}
+
+.article-post .article-footer .footer-meta a i {
+  font-size: 1rem;
+  margin-left: 0.125rem;
+}
+
+.article-link {
+  color: #439B94;
+}
+
+.article-link:hover {
+  color: #2f7f79;
+}
+
 
 /* Footer */
 footer {
@@ -450,37 +539,26 @@ a:link {
     #button-block {
       margin-top: -9rem;
     }
+
+    .main-heading {
+      margin-top: 14rem;
+      font-size: 3rem;
+      font-weight: 500;
+    }
+
+    .section-heading {
+      font-size: 2.1rem;
+      margin-top: 6rem;
+  }
+
   }
 
 /* LOGIN PAGE */
-#login-header {
-  background: url('/static/images/hero-image.jpg') no-repeat center;
-  background-size: cover;
-  height: 40rem;
+.modal {
+  top: 20%;
 }
-.header-font-style {
-  color: #EFFAFB;
-}
-
-.background-style {
-  background-color: #effafb82;
-  border-radius: 13px;
-}
-.form-control{
-  background-color: transparent;
-  border: none;
-  height: 3rem;
-  margin: 0 0 8px 0;
-}
-.btn-style{
-  color: #fff;
-  background-color: #b9de54;
-  border-color: #b9de54;
-  transition: background-color .2s ease-out
-}
-.btn-style:hover{
-  background-color: #b9de54;
-  border-color: #b9de54;
+.btn-check:focus+.btn, .btn:focus {
+  box-shadow:none;
 }
 
 /* Home page card's styling */
