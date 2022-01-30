@@ -582,35 +582,50 @@ a:link {
   height: 40rem;
 }
 
-#resources-container {
-  background: white;
-  width: 90%;
-  height: 80%;
-  border-radius: 5%;
-}
+
+
+/*#resources-container {
+  background: #4A8493;
+  width: 45%;
+  height: 60px;
+  margin: 0 auto;
+}*/
 
 #resources-header {
-  color: #17233D;
+  background-color: #4a8493;
   text-align: center;
-  text-decoration: underline;
-  margin-bottom: 20px;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 40%;
 }
 
-.resources-link {
+#card-container {
   width: 90%;
-  height: 30px;
-  border: 1px solid #17233D;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  height: 100%;
+  margin: 0 auto;
 }
 
-.resources-link a {
-  text-decoration: none;
-  text-align: center;
-  vertical-align: middle;
+#resources-row-1 {
+  columns: 5;
+  /*margin-bottom: 30px;*/
 }
 
-.resources-link:hover {
-  border: none;
-  color: #17233D;
+#resources-row-2 {
+  columns: 4;
+  /*margin-bottom: 20px;*/
 }
+
+.col-sm-6 {
+  width: 100%;
+  padding: 20px;
+  min-height: 300px;
+}
+
+.box {
+  background: #4A8493;
+  padding: 20px;
+  border-radius: 30px;
+  
+}
+
+
