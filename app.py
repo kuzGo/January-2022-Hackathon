@@ -1,3 +1,4 @@
+from email.mime import image
 import os
 from flask import Flask, render_template, redirect, url_for, request, flash, session
 from flask_mongoengine import MongoEngine, MongoEngineSession, MongoEngineSessionInterface
@@ -68,6 +69,24 @@ class User(db.Document, UserMixin):
     }
 
 
+# Blog Class (Collection) linked to User Class via user=username
+# Title indexing, ordering, and background-indexing for performance
+class Blog(db.Document):
+    title = db.StringField(default="", maxlength=250)
+    user = db.StringField(required=True)
+    short_description = db.StringField(default="", maxlength=2000)
+    creation_date = db.DateTimeField(default=datetime.datetime.now)
+    comments = db.StringField(default="", maxlength=3500)
+    image_link = db.StringField(default="")
+
+    meta = {
+        "auto_create_index": True,
+        "index_background": True,
+        "indexes": ["title"],
+        "ordering": ["title"]
+    }
+
+
 # Setup Flask-User and specify the User data-model
 user_manager = UserManager(app, db, User)
 
@@ -117,13 +136,49 @@ def timer():
     """
     return render_template("timer.html")
 
+
+@app.route("/add_blog")
+@login_required
+@app.errorhandler(CSRFError)
+def add_blog():
+    """
+    Preparing for the "C" in CRUD, filling in the add blog form.
+    """
+    return render_template("add_blog.html")
+
+
+@app.route("/save_blog", methods=["POST"])
+@login_required
+@app.errorhandler(CSRFError)
+def save_blog():
+    """
+    The "C" in CRUD, save the filled in add blog form.
+    """
+    blog = Blog(
+        title=request.form.get("title"),
+        user=current_user.username,
+        short_description=request.form.get("short_description"),
+        comments=request.form.get("comments"),
+        image_link=request.form.get("image")
+    )
+
+    try:
+        blog.save()
+        flash("The book was saved!", "success")
+    except Exception:
+        flash("The book was NOT saved!", "danger")
+    return redirect(url_for("blog"))
+
+
 @app.route("/blog")
 def blog():
     return render_template("blog.html")
 
+
 @app.route("/blog_post")
 def blog_post():
     return render_template("blog_post.html")
+
 
 @app.route("/resources")
 def resources():
