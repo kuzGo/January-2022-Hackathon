@@ -571,6 +571,55 @@ a:link {
   }
 
 /* LOGIN PAGE */
+/*.modal {
+  top: 20%;
+}
+.modal-content {
+  background: #4a849373!important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 25px 25px rgb(0 0 0 / 10%);
+}
+.btn-check:focus+.btn, .btn:focus {
+  box-shadow:none;
+}*/
+.card-login {
+  background-color:#2A5D65;
+  height: 54vh;
+}
+.background-color {
+  background-color: #88bfc440!important;
+}
+.form-control, #remember-me {
+  background-color: #ffe0;
+  border: 1px solid #ced4da00;
+  border-bottom: 1px solid #FCFAFA;
+}
+.control-label {
+  color: #FCFAFA;
+  margin-top: 3px;
+}
+#remember_me_label {
+  margin-top: 30px;
+  color:#FCFAFA;
+}
+.btn-outline-info {
+  color: #0dcaf0;
+}
+.header-style {
+  color:#FCFAFA;
+  letter-spacing: 2px;
+}
+.font-style, .control-label, #remember_me_label {
+  color: #fafafa;
+}
+.font-style-link {
+  color: #B9DE54;
+  font-weight: 500;
+}
+.font-style-link:hover {
+  color: #3BBFCE;
+}
+
 
 
 
