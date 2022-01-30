@@ -601,17 +601,9 @@ a:link {
 #resources-background {
   background: url('/static/images/hero-image.jpg') no-repeat center;
   background-size: cover;
-  height: 40rem;
+  
 }
 
-
-
-/*#resources-container {
-  background: #4A8493;
-  width: 45%;
-  height: 60px;
-  margin: 0 auto;
-}*/
 
 #resources-header {
   background-color: #4a8493;
@@ -647,7 +639,13 @@ a:link {
   background: #4A8493;
   padding: 20px;
   border-radius: 30px;
-  
 }
 
+@media screen and (max-width: 1700px) {
+  #resources-header {
+    width: 45%;
+  }
+
+  
+}
 
