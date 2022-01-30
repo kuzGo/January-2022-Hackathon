@@ -1,0 +1,30 @@
+{% extends "flask_user_layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mt-5 mb-4">
+                <h3>Title</h3>
+            </div>
+            <div>
+                <h5 class="text-muted text-center">Credit</h5>
+            </div>
+        </div>
+        <div class="row text-center">
+            <img src="#" alt="" class="img-fluid article-image">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="section-para">p1</p>
+                <p class="section-para">p2</p>
+                <p class="section-para">p3</p>
+            </div>
+        </div>
+        <div class="py-4">
+            <a class="btn section-button" href="{{ url_for('blog') }}">BACK</a>
+        </div>
+    </div>
+
+{% endblock %}
