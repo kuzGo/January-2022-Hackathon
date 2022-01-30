@@ -2,6 +2,7 @@
 
 {% block content %}
 {% from "flask_user/_macros.html" import render_field, render_checkbox_field, render_submit_field %}
+<h3 class="text-center text-uppercase my-3 header-style" >Sign in</h3>
 <form method="POST" class="form">
     {{ form.hidden_tag() }}
 
@@ -11,7 +12,6 @@
         <div class="form-group {% if field.errors %}has-error{% endif %}">
             <div class="row">
                 <div class="input-field col s12">
-                    
                     {{ field(class_='form-control') }}
                     <label for="{{ field.id }}" class="control-label">{{ field.label.text }}</label>
                     {% if field.errors %}
@@ -30,7 +30,6 @@
         <div class="form-group {% if field.errors %}has-error{% endif %}">
             <div class="row">
                 <div class="input-field col s12">
-    
                     {{ field(class_='form-control') }}
                     <label for="{{ field.id }}" class="control-label">{{ field.label.text }}</label>
                     {% if field.errors %}
@@ -48,7 +47,6 @@
     <div class="field_top_padding">
         <div class="row">
             <div class="col s12">
-                
                 <label id="remember_me_label">Remember Me&nbsp;
                     <input id="remember_me" name="remember_me" type="checkbox" /><span></span>
                 </label>
@@ -57,17 +55,16 @@
     </div>
     {% endif %}
 
-    <div class="button_top_padding">
-        <button class="btn waves-effect waves-light" type="submit" name="action">Sign In
-            
+    <div class="button_top_padding  d-flex justify-content-center">
+        <button class="btn btn-outline-info wave text-uppercase" type="submit" name="action">Sign In
         </button>
     </div>
 </form>
 <br>
 {% if user_manager.USER_ENABLE_REGISTER and not user_manager.USER_REQUIRE_INVITATION %}
-<p><a href="{{ url_for('user.register') }}">New here? Register.</a></p>
+<p><a class="font-style-link" href="{{ url_for('user.register') }}">New here? Register.</a></p>
 {% endif %}
 {% if user_manager.USER_ENABLE_FORGOT_PASSWORD %}
-<p><a href="{{ url_for('user.forgot_password') }}">Forgot your Password?</a></p>
+<p><a class="font-style-link" href="{{ url_for('user.forgot_password') }}">Forgot your Password?</a></p>
 {% endif %}
 {% endblock %}
