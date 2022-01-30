@@ -66,11 +66,10 @@
                                 <a class="nav-link" href="{{ url_for('timer')}}">Timer</a>
                             </li>
                             <li class="nav-item text-uppercase pe-5">
-                                <a class="nav-link" href="{{ url_for('resources')}}">Resources</a><!--Is this correct?-->
                                 <a class="nav-link" href="{{ url_for('blog')}}">Blog</a>
                             </li>
                             <li class="nav-item text-uppercase pe-5">
-                                <a class="nav-link" href="#">Resources</a>
+                                <a class="nav-link" href="{{ url_for('resources')}}">Resources</a><!--Is this correct?-->
                             </li>
                             <li class="nav-item text-uppercase pe-5">
                                 <a class="nav-link" href="{{ url_for('user.logout') }}">Logout</a>
@@ -208,10 +207,10 @@
                             <a href="{{ url_for('timer')}}" class="text-white">TIMER</a>
                         </li>
                         <li>
-                            <a href="{{ url_for'blog')}}" class="text-white">BLOG</a>
+                            <a href="{{ url_for('blog')}}" class="text-white">BLOG</a>
                         </li>
                         <li>
-                            <a href="#" class="text-white">RESOURCES</a>
+                            <a href="{{ url_for('resources')}}" class="text-white">RESOURCES</a>
                         </li>
                     </ul>
                 </div>
