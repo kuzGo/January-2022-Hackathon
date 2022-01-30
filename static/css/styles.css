@@ -657,6 +657,33 @@ a:link {
   width: 100%;
 }
 
+/* --- // Message Chips (Flask Flash Messages) */
+.message-success {
+  color: #FFFFFF;
+  background-color: #26A69A;
+}
+
+.message-info {
+  color: #FFFFFF;
+  background-color: #37474F;
+}
+
+.message-warning {
+  color: #FFFFFF;
+  background-color: orange;
+}
+
+.message-danger {
+  color: #FFFFFF;
+  background-color: #d81b60;
+}
+
+.help-block {
+  color: #FFFFFF;
+  background-color: #d81b60;
+}
+
+
 @media screen and (max-width: 1700px) {
   #resources-header {
     width: 45%;

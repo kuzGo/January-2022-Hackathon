@@ -1,6 +1,7 @@
 from email.mime import image
 import os
 from flask import Flask, render_template, redirect, url_for, request, flash, session
+import flask_login
 from flask_mongoengine import MongoEngine, MongoEngineSession, MongoEngineSessionInterface
 from flask_user import login_required, UserManager, UserMixin, current_user, roles_required
 from flask_login import logout_user
@@ -91,7 +92,7 @@ class Blog(db.Document):
 user_manager = UserManager(app, db, User)
 
 
-# --- // Mind Timer Main Routes (Endpoints): CRUD.
+# --- // Mindful Timer Main Routes (Endpoints): CRUD.
 @app.route("/")
 @app.route("/index")
 @app.route("/index.html")
@@ -101,9 +102,6 @@ def home_page():
     At first access/touch the user 'admin' is created using environment variables for the password and email address.
     The user creation is here as it will be created twice on Heroku if placed in the main code.
     """
-    if current_user.is_authenticated:
-        return redirect(url_for("timer"))
-
     # Create admin user as first/default user, if admin does not exist.
     # Password and e-mail are set using environment variables.
     if not User.objects.filter(User.username == "admin"):
@@ -128,32 +126,55 @@ def home_page():
     return render_template("index.html")
 
 # Main MindTimer Application Page
-@login_required
 @app.route("/timer")
 def timer():
     """
     The "R" in CRUD, authenticated user access to the MindTimer Application.
     """
+    if not current_user.is_authenticated:
+            flash("You must be logged in!", "danger")
+            return redirect(url_for("home_page"))
+            
     return render_template("timer.html")
 
 
+@app.route("/view_blog")
+@app.route("/view_blog/<int:page>")
+def member_page(page=1):
+    """
+    The "R" in CRUD, viewing Blog Posts.
+    """
+    if not current_user.is_authenticated:
+        flash("You must be logged in!", "danger")
+        return redirect(url_for("home_page"))
+
+    blogs_pagination = Blog.objects.filter(user=current_user.username).paginate(page=page, per_page=7)
+    return render_template("view_blog.html", blogs_pagination=blogs_pagination, page_prev=(page - 1), page_next=(page + 1))
+
+
 @app.route("/add_blog")
-@login_required
 @app.errorhandler(CSRFError)
 def add_blog():
     """
     Preparing for the "C" in CRUD, filling in the add blog form.
     """
+    if not current_user.is_authenticated:
+        flash("You must be logged in!", "danger")
+        return redirect(url_for("home_page"))
+
     return render_template("add_blog.html")
 
 
 @app.route("/save_blog", methods=["POST"])
-@login_required
 @app.errorhandler(CSRFError)
 def save_blog():
     """
     The "C" in CRUD, save the filled in add blog form.
     """
+    if not current_user.is_authenticated:
+        flash("You must be logged in!", "danger")
+        return redirect(url_for("home_page"))
+    
     blog = Blog(
         title=request.form.get("title"),
         user=current_user.username,
