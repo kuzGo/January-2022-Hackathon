@@ -23,58 +23,66 @@ Thus, the website's main feature is an adjustable timer with options of for 2 mi
 
 
 ### Site Owner goals
-
+- As site owners, we want to promote mindfulness and wellbeing
+- As site owners, we want our site to be easy to use and navigate
 
 ### All Visitor Goals
-
+- Visitors should be able to easily navigate the site's pages
+- Visitors should be able to easily operate the timer and select from the pre-set timer options
 
 ### First Time Visitor Goals
-
+- Visitors should be able to easily determine that the site's purpose is to provide tools to help them focus on their mindfulness and wellbeing at work
+- Visitors should be able to easily register an account and log in to that account
 
 ### Returning Visitor Goals
-
+- Returning visitors should be able to log in to their account
+- Returning visitors should be able to reset their account password if they forget it
+- Returning visitors should be able to delete their account if they desire
+- Returning visitors should be able to update their profile
 
 # Design
 ## Surface
 
-**Colour Scheme**
+### Colour Scheme
 
-We have chosen for the website colours: blue, turquoise and green which are often described as peaceful and stress relief  and are associated with balance and **emotional stability**.
+The website's chosen colour palette consists of blue, turquoise and green. These were chosen as they are pleasant to look at and may be associated with **peacefulness**, **stress relief**, **balance** and **emotional stability**.
 
-Referring to the colour psychology websites [very well mind](https://www.verywellmind.com/color-psychology-green-2795817) and [graf1x](https://graf1x.com/color-psychology-emotion-meaning-poster/)  
+Referring to the colour psychology websites [Very Well Mind](https://www.verywellmind.com/color-psychology-green-2795817) and [Graf1x](https://graf1x.com/color-psychology-emotion-meaning-poster/):  
 
-**Blue** calls to mind feelings of **calmness** or serenity and peace. It is often described as peaceful, tranquil, secure, and orderly. It is used to **reduce to stress**, create calmness and relax 
+**Blue** is associated with **calmness**, **serenity** and **peace**. It is calm, stress-relieving colour. Blue is often used to decorate offices because research has shown that people are more productive in blue rooms. 
 
-Blue is often used to decorate offices because research has shown that people are more productive in blue rooms. 
+**Green** is associated with **growth** and **health**. It is a **refreshing** and **peaceful** colour. Green is typically the colour of nature. It has a calming effect and is often considered a refreshing, relaxing colour. Green has been found to positively influence not only our emotions but our memories as well. Therefore, green has been employed to help users remember information.
 
-**Green** is the colour of growth and **health**. Green has strong association as a **refreshing** and **peaceful colour**. 
+**Turquoise** is a bright blue-green colour. Hence, it takes on the associations of both blue and green - the **calmness** of blue and the **growth** of green. Turquoise is also a bright, energetic colour much like **yellow**. Turquoise is associated with **freshness**,**mental clarity**,  **femininity**, **calmness**, **energy**, **serenity**, **creativity**, **balance** and **friendship**.
 
-Green is the colour of nature and has a calming effect and is often considered relaxing and refreshing colour has been found to influence not only our emotions but our memories. One study provided a group of people with a list of emotionally charged words written in different colours. Therefore, the colour green might give us an optimism bias when it comes to remembering information.
-
-**Turquoise** is a shade of blue that lies on the scale between blue and green. It has characteristics associated with both of these, such as the **calmness** of blue and the **growth** that is represented in green. Turquoise can also has the energy that yellow transmits, becoming an uplifting colour.
-
-The colour turquoise is associated with meanings of refreshing, feminine, calming, sophisticated, energy, wisdom, serenity, wholeness, **creativity**, **emotional balance**, spiritual grounding, friendship.
-
-Turquoise is linked to calmness, serenity and peace of mind, as well as to **mental clarity**.
-
-Turquoise encourages creativity. It is a colour linked to the ocean. It is also associated with balance and **emotional stability**. Turquoise has the characteristics of blue, green and yellow.
+Our colour scheme, with hex codes:
 
 ![proposed-colour-scheme-1](/static/images/proposed-colour-scheme-1.png)
 
 
 # Wireframes
 
-The Balsamiq Wireframes app was used to create the initial wireframes and update them through the creation of the project 
+The Balsamiq Wireframes app was used to create the initial wireframes and update them through the creation of the project. Wireframes were created for each page, with full-size versions for desktops and reduced-size versions for tablets and smartphones.
 
-Home page
+![home-page-pc](/static/wireframes/home-page-pc.png)
 
-Planner page
+[Smartphone and tablet version](/static/wireframes/home-page-tablet-and-phone.png)
 
-Register page
+![timers-pc](/static/wireframes/timers-pc.png)
 
-Sign up page
+[Smartphone and tablet version](/static/wireframes/timers-tablet-and-phone.png)
 
-Resources page
+![register-pc](/static/wireframes/register-pc.png)
+
+[Smartphone and tablet version](/static/wireframes/register-tablet-and-phone.png)
+
+![login-pc](/static/wireframes/login-pc.png)
+
+[Smartphone and tablet version](/static/wireframes/login-tablet-and-phone.png)
+
+![resources-pc](/static/wireframes/resources-pc.png)
+
+[Smartphone and tablet version](/static/wireframes/resources-tablet-and-phone.png)
 
 
 
@@ -86,7 +94,13 @@ Resources page
 
 [Flask](https://palletsprojects.com/p/flask/): Flask was used to create a framework for the project.
 
-[Flask User](https://flask-user.readthedocs.io/en/latest/): Flask User was used to create the registration and login functionality
+[Flask User](https://flask-user.readthedocs.io/en/latest/): Flask User was used to create the registration and login functionality.
+
+[Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/): Bootstrap was used to provide a framework for the project
+
+[Heroku](https://www.heroku.com/): Heroku was used to deploy the application
+
+[MongoDB](https://www.mongodb.com/): MongoDB was used to provide the database instance for the project, and to store user profiles
 
 [Slack](https://slack.com/intl/en-gb/): Slack was used to communicate and coordinate the actions of team members, share screenshots, and join video calls to discuss the project
 
@@ -98,17 +112,29 @@ Resources page
 ## Manual Testing
 
 ## Testing Site Owner Goals
+- The site itself serves to promote mindfulness and wellbeing
+- The resources page allows users to access other mindfulness and well-being resources
+- The site's navigation is built on modern User Design principles that allow for easy navigation
 
 ## Testing All Visitor Goals
+- The navigation bar in the header allows for easy and intuitive navigation
+- The timer's operation is simple and intuitive
 
 ## Testing First Time Visitor Goals
+- The purpose of the site is easily discernable
+- Account creation is simple and intuitive
 
 ## Testing Returning Visitor Goals
+- Account login is simple and intuitive
+- Password reset is easily accomplished
+- Account deletion is easily accomplished
+- Users can easily update their profile
 
 ## Validation Testing
 
 
 # Deployment
+
 ## Local Deployment
 
 To run this project locally make sure you have installed the following:
@@ -123,7 +149,7 @@ To run this project locally make sure you have installed the following:
 
 To clone this project and run locally please follow the below steps:
 1. Login into GitHub with your account
-2. Go to the [project repository](https://github.com/AdamBoley/January-2022-Hackathon) **URL NEEDS TO BE UPDATED**
+2. Go to the [project repository](https://github.com/AdamBoley/January-2022-Hackathon)
 3. If using Gitpod click on the "Code" button (located next to the green "Gitpod" button)
 4. From the dropdown menu copy the HTTPS URL
 5. In your local IDE open the terminal
@@ -132,7 +158,7 @@ To clone this project and run locally please follow the below steps:
 8. Press enter to create your local clone
 
 ### Install project dependencies
-- Install project requirements by typing `pip install -r requirements.txt`
+- Install project requirements by typing `pip install -r requirements.txt` in the terminal and pressing Enter
 
 ### Create a database on MongoDB
 
@@ -141,21 +167,21 @@ Register for a free account with [MongoDB](https://account.mongodb.com/account/r
 - Create a new Project and call it 'mindful timer'
 - Create a Cluster, choose the free tier option and select your region
 - Create a new database and call it 'mindfultimer_db'
-- Create Collections named **TBA**
+- Create Collections named "user" and "session"
 
-### Deploy locally
-- To run the project locally, in the terminal type `python3 app.py`
-- This will open a localhost address, which is provided in the CLI
-- Either copy and paste the url into a new browser tab, or hover over it and click the link
+### Local deployment
+- To run the project locally, in the terminal type `python3 app.py` and press Enter
+- This will open a localhost address, which is provided in the terminal output
+- Either copy and paste the URL into a new browser tab, or hover over it and click the link
 
 ### Deploy to Heroku
 
-The website of this project requires back-end technologies such as server, application, and database so the website is deployed on [Heroku](https://www.heroku.com/), which is a cloud platform with a service supporting several programming languages, because GitHub can only host a static websites.
+The website of this project requires back-end technologies such as a server, an application, and a database, so the website is deployed on [Heroku](https://www.heroku.com/), which is a cloud platform with a service supporting several programming languages, because GitHub Page can only host a static websites.
 
 Before deploying the website to Heroku, there are three important steps to follow to make the application work in Heroku correctly.
 
-1. Create `requirements.txt` file that contains the names of packages being used in Python. It is important to update the file if other packages or modules are installed during the project.
-2. Create `Procfile` that contains the name of the application file so that Heroku knows what to run.
+1. Create `requirements.txt` file that contains the names of packages being used in Python. It is important to update the file if other packages or modules are required for installation during the project.
+2. Create `Procfile` that contains the name of the application file so that Heroku knows what to run. Ensure it is formatted properly or deployment will fail.
 3. Push them into GitHub.
 
 Once above steps have been followed the website can be deployed. Please find the steps of the deployment in Heroku:
@@ -165,7 +191,7 @@ Once above steps have been followed the website can be deployed. Please find the
 3. Put an app name, which must be unique, choose a region and click create app
 4. Go to **Deploy** section and click **Connect to GitHub**
 5. Search for the repository by the repository name and connect it
-6. Before clicking Enable Automatic Deploys, hidden variables such as IP address, PORT, SECRET_KEY, MONGO_URI and MONGO_DATABASE need to be recorded in Heroku. Go to **Settings**, click **Reveal Config Vars** and fill out necessary keys and values.
+6. Before clicking Enable Automatic Deploys, hidden variables such as IP address, PORT, SECRET_KEY, MONGO_URI and MONGO_DATABASE need to be recorded in Heroku. Go to **Settings**, click **Reveal Config Vars** and fill out necessary keys and values. 
 7. Once all the hidden variables are recorded, then click **Enable Automatic Deploys** and click **Deploy Branch** (Main should be selected unless you want other branches to be deployed).
 8. When the app is deployed by Heroku correctly, there is a confirmation message and you can access the app.
 
@@ -189,40 +215,3 @@ The team:
 - [Adam Boley](https://github.com/AdamBoley)
 
 Our Facilitator, Aisha Bushell
-
-
-
-
-
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-
