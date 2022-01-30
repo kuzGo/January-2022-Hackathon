@@ -20,7 +20,7 @@ class ConfigClass(object):
 
     # Flask-User settings
     # Shown in email templates and page footers
-    USER_APP_NAME = "Mind Timer"
+    USER_APP_NAME = "Mindful Timer"
     USER_ENABLE_EMAIL = True                    # Enable email authentication
     USER_ENABLE_USERNAME = True                 # Enable username authentication
     USER_ENABLE_CONFIRM_EMAIL = True            # Enable email after registration
