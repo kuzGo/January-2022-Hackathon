@@ -601,7 +601,7 @@ a:link {
 #resources-background {
   background: url('/static/images/hero-image.jpg') no-repeat center;
   background-size: cover;
-  
+  background-attachment: fixed;
 }
 
 
@@ -620,12 +620,12 @@ a:link {
 }
 
 #resources-row-1 {
-  columns: 5;
+  column-count: 5;
   /*margin-bottom: 30px;*/
 }
 
 #resources-row-2 {
-  columns: 4;
+  column-count: 4;
   /*margin-bottom: 20px;*/
 }
 
@@ -646,6 +646,6 @@ a:link {
     width: 45%;
   }
 
-  
+
 }
 
