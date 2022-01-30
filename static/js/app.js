@@ -9,11 +9,19 @@ play.addEventListener("click", () => {
   audio.play();
   update();
 });
+// PLAY AUDIO ON IOS 
+play.addEventListener("touchstart", () => {
+  audio.play();
+  update();
+});
 // PAUSE AUDIO
 pause.addEventListener("click", () => {
   audio.pause();
 });
-
+// PAUSE AUDIO ON IOS
+pause.addEventListener("touchend", () => {
+  audio.pause();
+});
 // SELECT SEASONS AND THE VIDEO
 const seasons = document.querySelectorAll(".season"),
   video = document.querySelector(".video video");
