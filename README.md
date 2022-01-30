@@ -16,11 +16,11 @@ The aim of the project is to help digital workers - those working in offices and
 
 Thus, the website's main feature is an adjustable timer with options of for 2 minutes, 5 minutes, 10 minutes and 20 minutes that can be activated by a user. The timer allows users to take some time away from work to focus on their own wellbeing by drinking some water, doing some breathing exercises, or taking a short walk. The idea is to break up the user's day and try to prevent burnout by giving their brain a break. 
 
+The website also includes a resources page that functions as a signpost to other resources on mindfulness and wellbeing. 
 
 # User Experience
 
 ## User Stories
-
 
 ### Site Owner goals
 - As site owners, we want to promote mindfulness and wellbeing
