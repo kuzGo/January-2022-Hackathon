@@ -569,3 +569,48 @@ a:link {
 .card-body {
   background-color: transparent!important;
 }
+
+
+
+
+
+/*Resources Page styling*/
+
+#resources-background {
+  background: url('/static/images/hero-image.jpg') no-repeat center;
+  background-size: cover;
+  height: 40rem;
+}
+
+#resources-container {
+  background: white;
+  width: 90%;
+  height: 80%;
+  border-radius: 5%;
+}
+
+#resources-header {
+  color: #17233D;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.resources-link {
+  width: 90%;
+  height: 30px;
+  border: 1px solid #17233D;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.resources-link a {
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.resources-link:hover {
+  border: none;
+  color: #17233D;
+}
