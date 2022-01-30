@@ -1,13 +1,11 @@
 {% extends "flask_user_layout.html" %}
 
 {% block main %}
-<section id="image">
-<div class="container-fluid">
-    <div class="row d-flex justify-content-center h-100 ">
-        <div class="col-sm-7 col-md-6 col-lg-5 col-centered card-login shadow rounded m-4">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-7 col-md-6 col-lg-5 col-centered">
             {% block content %}{% endblock %}
         </div>
     </div>
 </div>
-</section>
 {% endblock %}
