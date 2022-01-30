@@ -121,6 +121,10 @@ def timer():
 def blog():
     return render_template("blog.html")
 
+@app.route("/blog_post")
+def blog_post():
+    return render_template("blog_post.html")
+
 @app.route("/resources")
 def resources():
     return render_template("resources.html")
