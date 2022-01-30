@@ -1,19 +1,85 @@
 {% extends "flask_user_layout.html" %}
 
 {% block content %}
-    <!-- Hero section -->
-    <div id="home-header">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-12 my-auto">
-                    <h1 class="main-heading text-uppercase animate__animated animate__backInDown  animate__delay-1s mt-5 mb-3">
-                        Welcome to Mindful Timer!
-                    </h1>
-                    <h3 class="sub-heading  animate__animated animate__backInUp animate__delay-1s">
-                        Mindful ...
-                    </h3>
-                </div>
-            </div>
-        </div>
+<!-- Hero section -->
+<div id="home-header">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-12 my-auto">
+        <h1 class="main-heading text-uppercase animate__animated animate__backInDown  animate__delay-1s mt-5 mb-3">
+          Welcome to Mindful Timer!
+        </h1>
+        <h3 class="sub-heading  animate__animated animate__backInUp animate__delay-1s">
+          Mindful ...
+        </h3>
+      </div>
     </div>
+  </div>
+</div>
+<!-- END of Hero section -->
+
+<!-- CARD section -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/meditate.jpg') }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Mindfulness Habits You Can Practice Everyday</h5>
+          <p class="card-text">In a sense, meditation is the art of mindfulness. In meditating, you are taking the time
+            to connect with your mind. It does take some time to practice controlled breathing and to shutout all of the
+            distractions, but it can be beneficial in so many way</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/zen.jpg') }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Easy yoga poses for beginners to build strength, flexibility, and mental clarity</h5>
+          <p class="card-text">Yoga can be practiced in-person either at a studio, gym, or recreation center or
+            virtually with online videos. When starting out, opt for a gentle class like restorative yoga, and let the
+            teacher know you're a beginner so they can modify poses.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/yoga.jpg') }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Yoga improves mental health,improves flexibility,helps with stress relief.</h5>
+          <p class="card-text">Major depressive disorder (MDD) is thought to be one of the most common mental health
+            disorders in the world.Both movement-based yoga therapies and breathing-based practices have been shown to
+            significantly improve depressive symptoms.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END OF CARD section -->
+
+<div id="timer-header">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#fff" fill-opacity="1"
+      d="M0,96L48,90.7C96,85,192,75,288,96C384,117,480,171,576,192C672,213,768,203,864,202.7C960,203,1056,213,1152,192C1248,171,1344,117,1392,90.7L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+    </path>
+  </svg>
+  
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-12 my-auto">
+        <h2 class="main-heading text-uppercase animate__animated animate__backInDown  animate__delay-1s mt-5 mb-3">
+          Notice | Listen | Breathe | Unwind
+        </h2>
+        <h2 class="sub-heading text-uppercase animate__animated animate__zoomInUp animate__delay-1s mt-5 mb-3">
+          Do it for yourself, and everyone you love. It only takes a few minutes.
+        </h2>
+        <h3 class="sub-heading  animate__animated animate__fadeInUp animate__delay-1s">
+          <a href="{{ url_for('timer')}}" class="btn animate__animated animate__rotateIn btn-danger btn-lg wave text-white">Try for free</a>
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}

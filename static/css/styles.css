@@ -36,7 +36,7 @@ span.navbar-text {
 /* Hero image */
 
 #home-header {
-  background: url('/static/images/hero-image.jpg') no-repeat center;
+  background: url('/static/images/woman.jpg') no-repeat center;
   background-size: cover;
   height: 40rem;
 }
@@ -44,15 +44,121 @@ span.navbar-text {
 .main-heading {
   margin-top: 10rem;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-weight: 600;
   color: #000000;
-  text-shadow: 0.07rem 0.06rem #fafafa;
+  text-shadow: 0.07rem 0.07rem #fafafa;
 }
+
+/* News page */
+#news-header {
+  background: url('/static/images/news.jpg') no-repeat center;
+  background-size: cover;
+  height: 40rem;
+}
+
+.sub-heading {
+  color: #fafafa;
+  text-shadow: 0.25rem 0.25rem 0.8rem #343a40;
+}
+
+#timer-header {
+  background: url('/static/images/brain-green.jpg') no-repeat center;
+  background-size: cover;
+  height: 54rem;
+}
+.timer-overlay {
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  background: #b7a90c;
+  mix-blend-mode: overlay;
+}
+.wave {
+  border-radius: 56% 44% 69% 31% / 43% 56% 44% 57% ;
+}
+.section-heading {
+  margin-top: 3rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+}
+
+.article-image {
+  height: 50%;
+  width: 50%;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post .article-header {
+  margin-bottom: 0.94rem;
+}
+
+.article-post {
+  width: 85%;
+  margin-bottom: 4rem;
+}
+
+.article-post .article-content {
+  -webkit-box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.15);
+  padding: 1.875rem;
+  position: relative;
+  background: #fff;
+  margin-top: -4.68rem;
+}
+
+.article-post .article-overlay {
+  position: relative;
+  left: 1.35rem;
+  margin-bottom: 0;
+}
+
+.article-post .article-overview p:last-of-type {
+  margin-bottom: 0;
+}
+
+.article-post .article-footer {
+  border-top: 1px solid #ebebeb;
+  padding-top: 0.94rem;
+  margin-top: 1.25rem;
+}
+
+.card-img-top {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.article-card-title a {
+  color: #439B94;
+}
+
+.footer-link>a {
+  color: #56C3D4;
+}
+
+.article-post .article-footer .footer-meta a i {
+  font-size: 1rem;
+  margin-left: 0.125rem;
+}
+
+.article-link {
+  color: #439B94;
+}
+
+.article-link:hover {
+  color: #2f7f79;
+}
+
 
 /* Footer */
 footer {
-  background-color: #4A8493;
+  background-color: #2DA6b4;
   width: 100%;
 }
 
@@ -174,6 +280,11 @@ a:link {
   background-color: #3BBFCE;
   color: #000000;
   font-family: 'Roboto', sans-serif;
+}
+
+/*Gaff's layout*/
+.sign-out-icon {
+  color: #3BBFCE !important;
 }
 
 /* Media Queries */
@@ -445,35 +556,98 @@ a:link {
     #button-block {
       margin-top: -9rem;
     }
+
+    .main-heading {
+      margin-top: 14rem;
+      font-size: 3rem;
+      font-weight: 500;
+    }
+
+    .section-heading {
+      font-size: 2.1rem;
+      margin-top: 6rem;
+  }
+
   }
 
 /* LOGIN PAGE */
-#login-header {
+.modal {
+  top: 20%;
+}
+.modal-content {
+  background: #4a849373!important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 25px 25px rgb(0 0 0 / 10%);
+}
+.btn-check:focus+.btn, .btn:focus {
+  box-shadow:none;
+}
+
+/* Home page card's styling */
+.card {
+  background-color: transparent!important;
+  margin: 56px 0;
+}
+.card-body {
+  background-color: transparent!important;
+}
+
+
+
+
+
+/*Resources Page styling*/
+
+#resources-background {
   background: url('/static/images/hero-image.jpg') no-repeat center;
   background-size: cover;
   height: 40rem;
 }
-.header-font-style {
-  color: #EFFAFB;
+
+
+
+/*#resources-container {
+  background: #4A8493;
+  width: 45%;
+  height: 60px;
+  margin: 0 auto;
+}*/
+
+#resources-header {
+  background-color: #4a8493;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 40%;
 }
 
-.background-style {
-  background-color: #effafb82;
-  border-radius: 13px;
+#card-container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
 }
-.form-control{
-  background-color: transparent;
-  border: none;
-  height: 3rem;
-  margin: 0 0 8px 0;
+
+#resources-row-1 {
+  columns: 5;
+  /*margin-bottom: 30px;*/
 }
-.btn-style{
-  color: #fff;
-  background-color: #b9de54;
-  border-color: #b9de54;
-  transition: background-color .2s ease-out
+
+#resources-row-2 {
+  columns: 4;
+  /*margin-bottom: 20px;*/
 }
-.btn-style:hover{
-  background-color: #b9de54;
-  border-color: #b9de54;
+
+.col-sm-6 {
+  width: 100%;
+  padding: 20px;
+  min-height: 300px;
 }
+
+.box {
+  background: #4A8493;
+  padding: 20px;
+  border-radius: 30px;
+  
+}
+
+

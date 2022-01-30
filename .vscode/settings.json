@@ -20,8 +20,9 @@
       "**/core.python*": true,
       "**/CVS": true
    },
-   "files.autoSave": "afterDelay",
-   "workbench.colorTheme": "Visual Studio Light",
+   "files.autoSave": "off",
+   "workbench.colorTheme": "Default Dark+",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify"
+   "editor.defaultFormatter": "HookyQR.beautify",
+   "python.pythonPath": "/home/gitpod/.pyenv/versions/3.8.11/bin/python"
 }
