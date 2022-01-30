@@ -69,7 +69,7 @@
                                 <a class="nav-link" href="{{ url_for('blog')}}">Blog</a>
                             </li>
                             <li class="nav-item text-uppercase pe-5">
-                                <a class="nav-link" href="#">Resources</a>
+                                <a class="nav-link" href="{{ url_for('resources')}}">Resources</a>
                             </li>
                             <li class="nav-item text-uppercase pe-5">
                                 <a class="nav-link" href="{{ url_for('user.logout') }}">Logout</a>
@@ -82,7 +82,7 @@
                                 <a class="nav-link" href="{{ url_for('blog')}}">Blog</a>
                             </li>
                             <li class="nav-item text-uppercase pe-5">
-                                <a class="nav-link" href="#">Resources</a>
+                                <a class="nav-link" href="{{ url_for('resources')}}">Resources</a>
                             </li>
 
                             <!-- Modal for Login
@@ -212,7 +212,7 @@
                             <a href="{{ url_for('blog')}}" class="text-white">BLOG</a>
                         </li>
                         <li>
-                            <a href="#" class="text-white">RESOURCES</a>
+                            <a href="{{ url_for('resources')}}" class="text-white">RESOURCES</a>
                         </li>
                     </ul>
                 </div>
