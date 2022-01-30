@@ -132,6 +132,11 @@ The Balsamiq Wireframes app was used to create the initial wireframes and update
 
 ## Validation Testing
 
+## Bugs 
+
+During on-going testing, one team member accessed the website on their iPhone and found that the sound for the timer function does not work. 
+
+Other team members access the website on their Android phones and reported that the sound did work. The cause of this discrepancy is unknown. 
 
 # Deployment
 
@@ -200,6 +205,28 @@ Once above steps have been followed the website can be deployed. Please find the
 
 
 # Credits
+
+## Resources
+
+The following resources were used in the Resources page of the Mindful Timer website
+
+[NHS mental health advice](https://www.nhs.uk/mental-health/self-help/tips-and-support/mindfulness/)
+
+[The Human Condition](https://thehumancondition.com/)
+
+[Active Wellness](https://www.activewellness.com/blog)
+
+[Mindful](https://www.mindful.org/)
+
+[Additude](https://www.additudemag.com/)
+
+[Oxford Mindfullness](https://www.oxfordmindfulness.org/)
+
+[Free Mindfulness](https://www.freemindfulness.org/welcome)
+
+[The Wellness Society](https://thewellnesssociety.org/)
+
+[Mindfulness for Teens](http://mindfulnessforteens.com/)
 
 ## Acknowledgements
 
