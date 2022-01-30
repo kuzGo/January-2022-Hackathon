@@ -85,44 +85,9 @@
                             </li>
                             <li class="nav-item text-uppercase pe-5">
                                 <a class="nav-link" href="{{ url_for('resources')}}">Resources</a>
-                            </li>
-
-
-
-                            <!-- Modal for Login-->
-
-                            <li class="nav-item text-uppercase pe-5">
-
-                                <button type="button" class="text-uppercase navbar-nav nav-link btn d-block" data-bs-toggle="modal" data-bs-target="#modalForm">
-                                    Login
-                                </button>
                             </li> 
-
-                            <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form>
-                                                <a class="nav-link" href="{{ url_for('user.login') }}">Login</a>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                           
-                             -->
-
-                            
-
                             <li class="nav-item text-uppercase pe-5">
-                                <!-- trigger here -->
                                 <a class="nav-link" href="{{ url_for('user.login') }}">Login</a>
-                                
                             </li>
                             <li class="nav-item text-uppercase pe-5">
                                 <a class="nav-link" href="{{ url_for('user.register')}}">Register</a>
