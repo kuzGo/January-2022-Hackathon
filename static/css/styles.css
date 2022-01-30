@@ -571,23 +571,16 @@ a:link {
   }
 
 /* LOGIN PAGE */
-/*.modal {
-  top: 20%;
+#image {
+  /*background: url('/static/images/brain-green.jpg') no-repeat center;
+  background-size: cover;*/
+  height: 40rem;
+  background-color: #88bfc440!important;
 }
-.modal-content {
-  background: #4a849373!important;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 25px 25px rgb(0 0 0 / 10%);
-}
-.btn-check:focus+.btn, .btn:focus {
-  box-shadow:none;
-}*/
 .card-login {
   background-color:#2A5D65;
   height: 54vh;
-}
-.background-color {
-  background-color: #88bfc440!important;
+  padding: 20px 50px;
 }
 .form-control, #remember-me {
   background-color: #ffe0;
@@ -619,7 +612,11 @@ a:link {
 .font-style-link:hover {
   color: #3BBFCE;
 }
-
+.form-control:focus {
+  background-color:#2d7580eb!important;
+  border:none;
+  box-shadow: none;
+}
 
 
 
