@@ -64,21 +64,16 @@ span.navbar-text {
   color: #fafafa;
   text-shadow: 0.25rem 0.25rem 0.8rem #343a40;
 }
-
+.hero-heading {
+  color: #000000;
+  text-shadow: 0.25rem 0.25rem 0.8rem #343a40;
+}
 #timer-header {
   background: url('/static/images/brain-green.jpg') no-repeat center;
   background-size: cover;
   height: 54rem;
 }
-.timer-overlay {
-  position: absolute;
-  /* top: 0;
-  left: 0; */
-  width: 100%;
-  height: 100%;
-  background: #b7a90c;
-  mix-blend-mode: overlay;
-}
+
 .wave {
   border-radius: 56% 44% 69% 31% / 43% 56% 44% 57% ;
 }
@@ -690,9 +685,6 @@ a:link {
   height: 125px;
 }
 
-.btn {
-  width: 100%;
-}
 
 /* --- // Message Chips (Flask Flash Messages) */
 .message-success {
