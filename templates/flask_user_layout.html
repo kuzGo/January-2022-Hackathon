@@ -47,9 +47,9 @@
             <div class="row mb-2">
                 <nav class="navbar navbar-expand-lg navbar-light py-lg-2">
                     <a class="navbar-brand d-md-flex bigify grow" href="{{ url_for('home_page')}}">
-                        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"
+                        <img src="{{ url_for('static', filename='images/timer.png') }}" alt="logo"
                             class="d-inline-block align-text-top" id="brand-logo" loading="lazy">
-                        <span class="navbar-text"> MindfulTimer</span>
+                        <span class="navbar-text"> MindfulTimer&#8482;</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -153,36 +153,44 @@
         {%- endwith %}
         {% endblock %}
     </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+  
+  <!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title text-uppercase" id="exampleModalLabel">Get in touch</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="px-4 py-3">
+                <form id="form" class="px-4 py-3">
                     <div class="mb-3">
-                        <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com" required>
+                        <label for="username" class="form-label">Your Name</label>
+                        <input class="form-control" type="text" name="from_name" id="username" placeholder="Your name"
+                            aria-label="name">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" name="from_email" id="email"
+                            placeholder="email@example.com" required>
                     </div>
                     <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                        <textarea class="form-control" placeholder="Leave a comment here" name="message"
+                            id="floatingTextarea"></textarea>
                         <label for="floatingTextarea">Comments</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <p class="footer-phone mt-3">
+                        <strong>Tel:</strong>
+                        <a class="text-dark" href="tel:+353875555222">
+                            +353 (0) 875555222
+                        </a>
+                    </p>
+                    <button type="submit" id="contactButton" class="btn btn-outline-dark mt-3">Send</button>
                 </form>
             </div>
-            </div>
-        </div>
         </div>
     </div>
+</div>
     {% block main %}
     {% block content %}{% endblock %}
     {% endblock %}
@@ -217,10 +225,11 @@
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0 footer-contact">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary text-uppercase" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                contact
-                            </button>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-info text-uppercase" data-bs-toggle="modal"
+                        data-bs-target="#contactModal">
+                        contact
+                    </button>
                     <p class="footer-email">
                         <strong>Email:</strong>
                         <a href="mailto:info@mindfultimer.com">
@@ -229,10 +238,11 @@
                     </p>
                 </div>
             </div>
+            
             <hr class="mb-4" />
         </div>
         <div class="text-center p-3" id="copyright">
-            © 2022 Mindful Timer
+            © 2022 Mindful Timer &#8482;
         </div>
     </footer>
     
@@ -241,12 +251,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 
+    <!-- EmailsJS Required Javascript -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('user_AKMpib1d7UzETb4pKjz1O')
+    </script>
+
+    <!-- Sweet ALerts :https://sweetalert.js.org/guides/  -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <!-- Internal script file -->
     <!-- Message Chip Timeout -->
     <script src="{{ url_for('static', filename = 'js/message.js') }}"></script>
-    <script>$('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus')
-      })</script>
+    <!-- Contact form emails -->
+    <script src="{{ url_for('static', filename = 'js/contact.js') }}"></script>
+    
     {# *** Allow sub-templates to insert extra html to the bottom of the body *** #}
     {% block extra_js %}{% endblock %}
 </body>
