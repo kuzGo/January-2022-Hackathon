@@ -136,21 +136,7 @@ def timer():
             return redirect(url_for("home_page"))
             
     return render_template("timer.html")
-
-
-@app.route("/view_blog")
-@app.route("/view_blog/<int:page>")
-def member_page(page=1):
-    """
-    The "R" in CRUD, viewing Blog Posts.
-    """
-    if not current_user.is_authenticated:
-        flash("You must be logged in!", "danger")
-        return redirect(url_for("home_page"))
-
-    blogs_pagination = Blog.objects.filter(user=current_user.username).paginate(page=page, per_page=7)
-    return render_template("view_blog.html", blogs_pagination=blogs_pagination, page_prev=(page - 1), page_next=(page + 1))
-
+    
 
 @app.route("/add_blog")
 @app.errorhandler(CSRFError)
@@ -192,8 +178,17 @@ def save_blog():
 
 
 @app.route("/blog")
-def blog():
-    return render_template("blog.html")
+@app.route("/blog/<int:page>")
+def blog(page=1):
+    """
+    The "R" in CRUD, viewing Blog Posts.
+    """
+    if not current_user.is_authenticated:
+        flash("You must be logged in!", "danger")
+        return redirect(url_for("home_page"))
+
+    blogs_pagination = Blog.objects.filter(user=current_user.username).paginate(page=page, per_page=3)
+    return render_template("blog.html", blogs_pagination=blogs_pagination, page_prev=(page - 1), page_next=(page + 1))
 
 
 @app.route("/blog_post")
