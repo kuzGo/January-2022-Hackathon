@@ -14,13 +14,16 @@ html, body {
 .navbar-light .navbar-nav .nav-link {
   color: #000000;
   font-family: 'Roboto', sans-serif;
+  
 }
 
 .navbar-nav {
   font-size: 1.125rem;
   text-align: right;
 }
-
+.white-navbar {
+  background-color: #fff;
+}
 #brand-logo {
   width: 60px;
   height: 60px;
